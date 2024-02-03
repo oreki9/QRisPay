@@ -1,18 +1,18 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'QRisPay' do
+target 'TestProject' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for QRisPay
+  # Pods for TestProject
 
-  target 'QRisPayTests' do
+  target 'TestProjectTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'QRisPayUITests' do
+  target 'TestProjectUITests' do
     # Pods for testing
   end
 
