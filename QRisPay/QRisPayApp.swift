@@ -9,9 +9,22 @@ import SwiftUI
 
 @main
 struct QRisPayApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView { MyViewController()}
+            .navigationViewStyle(StackNavigationViewStyle()) // Optional styling
         }
+    }
+}
+
+struct MyViewController: UIViewControllerRepresentable {
+    func makeUIViewController(context: Context) -> UIViewController {
+        let viewController = HomeRouter.createHomeModule()
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
     }
 }
