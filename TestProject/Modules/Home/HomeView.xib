@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,11 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeView" customModule="TestProject" customModuleProvider="target">
             <connections>
-                <outlet property="amountLbl" destination="ZJD-2H-5zG" id="8hG-zR-eci"/>
-                <outlet property="mainBoard" destination="QZ2-zK-jAG" id="rFb-Tf-eBn"/>
-                <outlet property="scanQR" destination="Cz2-a6-a7p" id="Akf-gE-YY1"/>
-                <outlet property="seeAllHistoryBtn" destination="aPz-ph-tTc" id="9kh-OS-sNa"/>
-                <outlet property="toolbarView" destination="vd9-zY-jae" id="vfs-6o-RqM"/>
+                <outlet property="collectionLayout" destination="q4Q-dd-Klu" id="Dhi-4P-KXV"/>
+                <outlet property="collectionView" destination="IQ1-Pu-P6c" id="Sub-cB-vYH"/>
+                <outlet property="toolbar" destination="mmP-Pd-DvH" id="SpK-G5-lHH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,93 +22,41 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vd9-zY-jae" customClass="ToolbarView" customModule="TestProject" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mmP-Pd-DvH" customClass="ToolbarView" customModule="TestProject" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="59" width="393" height="50"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="CtO-Ta-QPM"/>
+                        <constraint firstAttribute="height" constant="50" id="Sjy-LY-B2X"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZ2-zK-jAG" customClass="UIViewCustom" customModule="TestProject" customModuleProvider="target">
-                    <rect key="frame" x="30" y="129" width="333" height="155"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-YA-d1B">
-                            <rect key="frame" x="20" y="20" width="58" height="23"/>
-                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJD-2H-5zG">
-                            <rect key="frame" x="78" y="48" width="41.666666666666657" height="23"/>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPz-ph-tTc">
-                            <rect key="frame" x="20" y="99" width="293" height="36"/>
-                            <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
-                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="See All Histoy">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                        </button>
-                    </subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IQ1-Pu-P6c">
+                    <rect key="frame" x="10" y="129" width="373" height="629"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="aPz-ph-tTc" secondAttribute="bottom" constant="20" id="0D7-EA-7rr"/>
-                        <constraint firstItem="ZJD-2H-5zG" firstAttribute="top" secondItem="V9b-YA-d1B" secondAttribute="bottom" constant="5" id="5tw-en-zxo"/>
-                        <constraint firstAttribute="trailing" secondItem="aPz-ph-tTc" secondAttribute="trailing" constant="20" id="PTn-6u-ezb"/>
-                        <constraint firstItem="V9b-YA-d1B" firstAttribute="leading" secondItem="QZ2-zK-jAG" secondAttribute="leading" constant="20" id="RyS-lb-dZi"/>
-                        <constraint firstItem="ZJD-2H-5zG" firstAttribute="leading" secondItem="V9b-YA-d1B" secondAttribute="trailing" id="Sf1-wa-dF5"/>
-                        <constraint firstItem="aPz-ph-tTc" firstAttribute="leading" secondItem="QZ2-zK-jAG" secondAttribute="leading" constant="20" id="YpV-Vf-gM7"/>
-                        <constraint firstItem="V9b-YA-d1B" firstAttribute="top" secondItem="QZ2-zK-jAG" secondAttribute="top" constant="20" id="zg0-4n-LGf"/>
-                        <constraint firstAttribute="height" constant="155" id="zuO-wc-fft"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="8"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="0.0"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                            <color key="value" red="0.14579368727002659" green="0.16478621273875349" blue="0.38503235132158586" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cz2-a6-a7p">
-                    <rect key="frame" x="20" y="762" width="353" height="36"/>
-                    <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
-                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Scan QR">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="q4Q-dd-Klu">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vd9-zY-jae" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2iB-p7-Iib"/>
-                <constraint firstItem="Cz2-a6-a7p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="O4B-sT-9VM"/>
-                <constraint firstItem="QZ2-zK-jAG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="OgR-2O-8lm"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Cz2-a6-a7p" secondAttribute="bottom" constant="20" id="Php-NF-8Ke"/>
-                <constraint firstItem="vd9-zY-jae" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SIp-Rv-J8x"/>
-                <constraint firstItem="QZ2-zK-jAG" firstAttribute="top" secondItem="vd9-zY-jae" secondAttribute="bottom" constant="20" id="Z5a-t7-Ef0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cz2-a6-a7p" secondAttribute="trailing" constant="20" id="nuw-lL-u08"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vd9-zY-jae" secondAttribute="trailing" id="vDK-TT-Oz0"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QZ2-zK-jAG" secondAttribute="trailing" constant="30" id="ykH-eg-aBi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IQ1-Pu-P6c" secondAttribute="trailing" constant="10" id="98D-Pt-4xC"/>
+                <constraint firstItem="mmP-Pd-DvH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9J6-J3-GpD"/>
+                <constraint firstItem="mmP-Pd-DvH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IdB-Wg-7Pe"/>
+                <constraint firstItem="IQ1-Pu-P6c" firstAttribute="top" secondItem="mmP-Pd-DvH" secondAttribute="bottom" constant="20" id="Jw3-tD-oxx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="IQ1-Pu-P6c" secondAttribute="bottom" constant="60" id="Qwj-Pq-8hD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mmP-Pd-DvH" secondAttribute="trailing" id="Ubd-Ir-ZE1"/>
+                <constraint firstItem="IQ1-Pu-P6c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="apc-Vn-mmY"/>
             </constraints>
-            <point key="canvasLocation" x="-37" y="20"/>
+            <point key="canvasLocation" x="98" y="20"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="underPageBackgroundColor">
-            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

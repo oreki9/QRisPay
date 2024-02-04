@@ -6,7 +6,7 @@ target 'TestProject' do
   use_frameworks!
 
   # Pods for TestProject
-
+  # kalau pakai Alamofire mungkin terlalu overkill (berlebihan)?
   target 'TestProjectTests' do
     inherit! :search_paths
     # Pods for testing

@@ -2,7 +2,7 @@
 //  HomeRouter.swift
 //  TestProject
 //
-//  Created by rickyTA on 02/02/24.
+//  Created by rickyTA on 03/02/24.
 //
 
 import UIKit
@@ -29,15 +29,10 @@ class HomeRouter: PTRHomeProtocol {
         view.presenter = presenter
         return view
     }
-    func navigateScanQR(nav: UINavigationController){
-        let vc = ScanRouter.createScanModule()
-        nav.pushViewController(vc, animated: true)
-    }
-    func navigateBackVC(nav: UINavigationController) {
-        nav.popViewController(animated: true)
-    }
-    func navigateToPayHistory(nav: UINavigationController) {
-        let vc = HistoryRouter.createHistoryModule()
+    func navigateToDetail(image: UIImage, data: PromoEntity, nav: UINavigationController){
+        let vc = DetailRouter.createDetailModule(image: image, data: data)
         nav.pushViewController(vc, animated: true)
     }
 }
+
+    //MARK: - Extension HomeRouter

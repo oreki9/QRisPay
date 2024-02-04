@@ -2,7 +2,7 @@
 //  HomePresenter.swift
 //  TestProject
 //
-//  Created by rickyTA on 02/02/24.
+//  Created by rickyTA on 03/02/24.
 //
 
 import Foundation
@@ -24,18 +24,17 @@ class HomePresenter: VTPHomeProtocol {
     }
     
     //MARK: - Function HomePresenter
-    func goToScanQR(nav: UINavigationController){
-        router?.navigateScanQR(nav: nav)
+    func getPromoData(){
+        interactor?.fetchPromoData()
     }
-    func pushBackVC(nav: UINavigationController) {
-        router?.navigateBackVC(nav: nav)
-    }
-    func goToPayHistory(nav: UINavigationController) {
-        router?.navigateToPayHistory(nav: nav)
+    func goToDetail(image: UIImage, data: PromoEntity, nav: UINavigationController){
+        router?.navigateToDetail(image: image, data: data, nav: nav)
     }
 }
 
     //MARK: - Extension HomePresenter
 extension  HomePresenter : ITPHomeProtocol {
-
+    func setListPromo(data: HomeEntity){
+        view?.showListPromo(data: data)
+    }
 }

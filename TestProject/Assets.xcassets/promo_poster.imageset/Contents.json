@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "RAG-Sosmed-BNI Fleksi-FA-231004_IGS.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "RAG-Sosmed-BNI Fleksi-FA-231004_IGS 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "RAG-Sosmed-BNI Fleksi-FA-231004_IGS 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
