@@ -6,7 +6,8 @@ target 'TestProject' do
   use_frameworks!
 
   # Pods for TestProject
-
+  pod 'Charts', '~> 3.0.1'
+  pod 'RealmSwift', '~> 2.0.2'
   target 'TestProjectTests' do
     inherit! :search_paths
     # Pods for testing
@@ -16,4 +17,11 @@ target 'TestProject' do
     # Pods for testing
   end
 
+  # post_install do |installer|
+  #   installer.pods_project.targets.each do |target|
+  #     target.build_configurations.each do |config|
+  #       config.build_settings['SWIFT_VERSION'] = '3.0'
+  #     end
+  #   end
+  # end
 end

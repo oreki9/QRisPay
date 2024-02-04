@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C96A3F02B6F60D90067526B /* ChartUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C96A3EF2B6F60D90067526B /* ChartUtils.swift */; };
 		9CE33A792B6D3656007F63C4 /* TestProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE33A782B6D3656007F63C4 /* TestProjectApp.swift */; };
 		9CE33A7B2B6D3656007F63C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE33A7A2B6D3656007F63C4 /* ContentView.swift */; };
 		9CE33A7D2B6D3658007F63C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE33A7C2B6D3658007F63C4 /* Assets.xcassets */; };
@@ -148,6 +149,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C96A3EF2B6F60D90067526B /* ChartUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartUtils.swift; sourceTree = "<group>"; };
 		9CE33A752B6D3656007F63C4 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE33A782B6D3656007F63C4 /* TestProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestProjectApp.swift; sourceTree = "<group>"; };
 		9CE33A7A2B6D3656007F63C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 				9CE33B442B6DE403007F63C4 /* extDouble.swift */,
 				9CE33B482B6DE410007F63C4 /* extString.swift */,
 				9CE33B4C2B6DFBC9007F63C4 /* AppSetting.swift */,
+				9C96A3EF2B6F60D90067526B /* ChartUtils.swift */,
 			);
 			path = CommonUtils;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				9CE33AB02B6D4268007F63C4 /* HistoryPresenter.swift in Sources */,
 				9CE33B492B6DE410007F63C4 /* extString.swift in Sources */,
 				9CE33ADE2B6D4279007F63C4 /* ResultPayEntity.swift in Sources */,
+				9C96A3F02B6F60D90067526B /* ChartUtils.swift in Sources */,
 				9CE33AD82B6D4279007F63C4 /* ResultPayProtocol.swift in Sources */,
 				9CE33ACF2B6D4279007F63C4 /* ResultPayRouter.swift in Sources */,
 				9CE33B102B6D429E007F63C4 /* HomeProtocol.swift in Sources */,
